@@ -2,10 +2,72 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do list</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+           background-color: beige; 
+        }
+h1{
+    text-align: center;
+}
+.task-details{
+    display: flex;
+    justify-content: space-between;
+}
+.container{
+    max-width: 900px;
+    margin:auto;
+    margin-bottom: 5px;
+    background-color: rgb(255, 127, 168);
+    box-shadow: 2px 2px 2px rgb(176, 27, 94);
+    padding: 5px;
+}
+.taskbtn{
+    background-color: blue;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 2px 5px 5px 450px; 
+    cursor: pointer;
+    border:none;
+}
+li{
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    background-color: blueviolet;
+    color: rgb(122, 255, 146);
+    border-radius: 5px ;
+    padding: 5px;
+    margin: 5px;
+   
+}
+/* ul{
+    border: 1px solid black;
+} */
+input[type="text"]{
+margin:10px;
+border:none;
+border-radius: 3px;
+}
+
+    </style>
 </head>
 <body>
-    <h1>Hello</h1>
+    <div class="container">
+    <h1>To-Do List App</h1>
+    <div class="task-details"> 
+<input type="text"  placeholder="add task" size="40" id="text">
+
+<button class="taskbtn" onclick="addtask()">Add Task</button>
+
+ </div>
+<ul id="task"></ul>
+</div>
+<script src="simple.js"></script>
 </body>
 </html>
